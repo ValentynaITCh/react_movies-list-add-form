@@ -5,13 +5,12 @@ import moviesFromServer from './api/movies.json';
 import { useState } from 'react';
 import { Movie } from './types/Movie';
 
-
-
 export const App = () => {
   const [movies, setMovies] = useState(moviesFromServer);
-const handleAddingMovie = (movie: Movie) => {
-  setMovies(prevMovies => [...prevMovies, movie])
-}
+  const handleAddingMovie = (movie: Movie) => {
+    setMovies(prevMovies => [...prevMovies, movie]);
+  };
+
   return (
     <div className="page">
       <div className="page-content">
